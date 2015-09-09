@@ -13,6 +13,6 @@ DF3 <- read.table("./exdata-data-household_power_consumption/household_power_con
 DF3[ , 1] <- as.Date(DF3$Date, "%d/%m/%Y")
 DF3$Time <- strptime(paste0(DF3$Date, ' ', DF3$Time), '%Y-%m-%d %H:%M:%S')
 hist(DF3$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
-dev.copy(png, ".\ExData_Plotting1\p1.png")
+dev.copy(png, "plot1.png")
 dev.off()
 
